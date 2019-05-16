@@ -265,6 +265,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-scholar
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -309,3 +310,30 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  group_by: none
+  group_order: ascending
+
+  source: ./_bibliography
+  bibliography: references.bib
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
+  bibliography_template:  bibtemplate
+
+#repository: EduardoFF/EduardoFF.github.io
