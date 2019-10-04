@@ -11,7 +11,7 @@ title                    : "Eduardo Feo-Flushing"
 title_separator          : "-"
 name                     : &name "Eduardo Feo-Flushing"
 description              : &description "Postdoctoral Associate for Computer Science"
-url                      : https://efeoflushing.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://www.efeoflushing.com # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "eduardoff/eduardoff.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -82,13 +82,13 @@ analytics:
 author:
   name             : "Eduardo Feo-Flushing"
   avatar           : "profile.jpg"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Post-doctoral associate at Carnegie Mellon University - Qatar"
   location         : "Doha, Qatar"
   employer         :
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  pubmed           :
   googlescholar    : "https://scholar.google.ch/citations?user=Ov2iGjsAAAAJ&hl=en"
   email            :
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  "https://www.researchgate.net/profile/Eduardo_Feo_Flushing"
   uri              :
   bitbucket        :
   codepen          :
@@ -103,7 +103,7 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         :
-  orcid            : "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0000-0002-0005-7133"
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
@@ -312,7 +312,7 @@ compress_html:
     envs: development
 
 scholar:
-  style: apa
+  style: assets/bibliography/ieee-with-url.csl
   locale: en
 
   sort_by: none
@@ -322,7 +322,7 @@ scholar:
   group_order: ascending
 
   source: ./_bibliography
-  bibliography: references.bib
+  bibliography: references_all.bib
 
   replace_strings: true
   join_strings:    true
@@ -336,4 +336,5 @@ scholar:
   query: "@*"
   bibliography_template:  bibtemplate
 
+minimal_mistakes_skin: "contrast"
 #repository: EduardoFF/EduardoFF.github.io

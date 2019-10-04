@@ -1,22 +1,33 @@
-{{reference}}
-    {% if entry.abstract %}
-    <button class="btn btnId btnPub--abstract" id="b_{{key}}-abstract" style="outline:none;">Abstract</button>
-    {% endif %}
+---
+---
+<div class="text-justify">{{reference}}</div>
+<button class="button0"  onclick="toggleBibtex{{entry.key}}()">Bibtex</button>
 
-    <button class="btn btnId btnPub--BibTex" id="b_{{key}}-bibtex" style="outline:none;">BibTeX</button>
+{% if entry.doi %}
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}"><input class="button1" type="button" value="doi" /></a>
+{% endif %}
 
-    {% if link %}
-    <a href="{{link}}"><button class="btn btnId btnPub--download" style="outline:none; position:relative;white-space: normal;">PDF</button></a>
-    {% endif %}
+{% if entry.preprint %}
+    <a href="{{ entry.preprint }}"><input class="button2" type="button" value="preprint" /></a>
+{% endif %}
 
-    {% if links['sup.pdf'] %}
-    <a href="{{links['sup.pdf']}}"><button class="btn btnId btnPub--supplement" style="outline:none; position:relative;white-space: normal;">Supplement</button></a>
-    {% endif %}
+{% if entry.link %}
+    <a href="{{ entry.link }}"><input class="button4" type="button" value="link" /></a>
+{% endif %}
 
-    <div class="dropDownBibtex" id="{{key}}-bibtex">
-    <pre>{{entry.bibtex}}</pre>
-    </div>
-
-    <div class="dropDownAbstract" id="{{key}}-abstract">
-    {{entry.abstract}}
-    </div>
+{% if entry.code %}
+    <a href="{{ entry.code }}"><input class="button3" type="button" value="code" /></a>
+{% endif %}
+<div id="a{{entry.key}}" style="display: none;">
+<pre>{{entry.bibtex}}</pre>
+</div>
+<script>
+function toggleBibtex{{entry.key}}(parameter) {
+    var x= document.getElementById('a{{entry.key}}');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
